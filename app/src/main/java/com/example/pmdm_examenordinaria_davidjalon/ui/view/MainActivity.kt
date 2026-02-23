@@ -28,19 +28,14 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        // Configurar RecyclerView
-        adapter = PaisAdapter { id ->
-            val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("PRODUCT_ID", id)
-            startActivity(intent)
-        }
+        adapter = PaisAdapter
         binding.rvPaises.layoutManager = LinearLayoutManager(this)
         binding.rvPaises.adapter = adapter
 
         viewModel = ViewModelProvider(this).get(PaisViewModel::class.java)
         viewModel.paisList.observe(this) { adapter.update(it) }
 
-        // Carga inicial
+
         viewModel.fetchEuropa("Europa")
     }
 

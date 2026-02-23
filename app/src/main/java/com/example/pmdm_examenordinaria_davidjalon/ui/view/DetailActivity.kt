@@ -20,17 +20,16 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val id = intent.getIntExtra("PRODUCT_ID", 1)
 
         viewModel = ViewModelProvider(this).get(PaisViewModel::class.java)
 
-        viewModel.paisDetail.observe(this) { pais ->
-            binding.tvTitleDetail.text = pais.
-            binding.tvDescDetail.text = pais.
+        viewModel.paisList.observe(this) { pais ->
+            binding.tvTitleDetail.text = pais.comun
+            binding.tvCapital.text = pais.capital
+            binding.tvPoblacion.text = pais.poblacion
 
             Picasso.get().load(pais.imagen).into(binding.ivDetail)
         }
 
-        viewModel.fetchPais(id)
     }
 }
