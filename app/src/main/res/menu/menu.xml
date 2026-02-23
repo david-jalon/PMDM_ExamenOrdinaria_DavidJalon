@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_europa" android:title="Europa" app:showAsAction="never" />
+    <item android:id="@+id/menu_america" android:title="America" app:showAsAction="never" />
+    <item android:id="@+id/menu_asia" android:title="Asia" app:showAsAction="never" />
+    <item android:id="@+id/menu_africa" android:title="Africa" app:showAsAction="never" />
+    <item android:id="@+id/menu_oceania" android:title="Oceania" app:showAsAction="never" />
+</menu>
