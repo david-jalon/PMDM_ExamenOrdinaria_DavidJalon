@@ -2,7 +2,7 @@ package com.example.pmdm_examenordinaria_davidjalon.repository
 
 import com.example.pmdm_examenordinaria_davidjalon.data.api.RetrofitClient
 
-class Repository() {
+class PaisRepository() {
     private val api = RetrofitClient.api
 
     suspend fun getEuropa(category: String) = api.getEuropa(category)
